@@ -1,0 +1,95 @@
+@charset "utf-8";
+/*Greg's CSS Content Formatting*/
+/*Filename: mango_content*/
+
+/*styling Header Container*/
+div#header-container {
+    background: rgba(250, 209, 250, 0.452);
+    padding-top: 3.5em;
+    display: flex;
+    justify-content: center;
+}
+
+/*styling Header (Animated, Courtesy of Geoff Graham)
+  <https://codepen.io/geoffgraham/pen/jrWwWM>*/
+.header-title h1 {
+    color: rgb(0, 0, 0);
+    font-family: 'Courier Prime', monospace;
+    font-weight: 800;
+    font-size: 50px;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(0, 0, 0);
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+        typing 3.5s steps(30, end),
+        blink-caret 1.2s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: rgb(0, 0, 0)
+    }
+}
+/*end header styling*/
+
+
+/*styling Nav*/
+.header-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.header-nav li {
+    float: left;
+}
+
+.header-nav>li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header-nav>li a:hover {
+    background-color: rgba(0, 0, 0, 0.432);
+    color: white;
+}
+
+/*styling Content Window*/
+/*styling About*/
+/*styling Sidebar*/
+/*styling Blank*/
+/*styling Blurb1*/
+/*styling Blurb2*/
+/*styling Footer*/
