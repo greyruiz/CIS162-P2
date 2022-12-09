@@ -1,0 +1,112 @@
+:root {
+    --main-radius: .6rem;
+    --grid-content-padding: .7rem;
+    --inside-padding: .3rem;
+    /*dark*/
+    --smokey-black: #0f0a0a;
+    /*light*/
+    --isa: #f5efed;
+    /*greys*/
+    --roman-silver: #7d8491;
+    --shadow: #7d7461;
+    --sh-milk: #BEB9B0;
+    --sh-cream: #D8D5CF;
+    /*greens*/
+    --sham-green: #329f5b;
+    --sea-green: #0c8346;
+    /*blues*/
+    --green-blue: #2364aa;
+    --shadow-blue: #7392b7;
+    --carolina-blue: #3da5d9;
+    /*pinks/red*/
+    --china-pink: #e06c9f;
+    --fiery-rose: #f45b69;
+    --ua-red: #db2955;
+    /*gold/orange*/
+    --goldenrod: #d19c1d;
+    --bright-yc: #f9a620;
+    --carrot-orange: #f18f01;
+    /*purples*/
+    --amethyst: #9067c6;
+    --mb-purple: #8d86c9;
+    --royale-purple: #7343b1;
+    --p-maj: #9e7acd;
+    /*neutrals*/
+    --copper-rose: #a07178;
+    --oil-lav: #776274;
+}
+
+#flip1,
+#flip2,
+#flip3 {
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+#flip1:hover .flip-card-inner {
+    transform: rotateY(-180deg);
+}
+
+#flip2:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+#flip3:hover .flip-card-inner {
+    transform: rotateX(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: var(--smokey-black);
+    border-radius: var(--main-radius);
+    
+    color: var(--sh-cream);
+
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: var(--smokey-black);
+    border-radius: var(--main-radius);
+    
+    color: var(--sh-cream);
+    transform: rotateY(180deg);
+}
+
+.flip-card-back3 {
+    background-color: var(--smokey-black);
+    border-radius: var(--main-radius);
+    color: white;
+    transform: rotateX(180deg);
+}
+
+.flip-card-back3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
